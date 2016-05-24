@@ -1,0 +1,7 @@
+<h1>My Awsome Planetarium</h1>
+<!-- put a link as you have no data to display the first time to create by the command
+rake routes you can konw the routes that take you to the new planet path which is new_planet_path  -->
+<%= link_to 'Create new Planet',new_planet_path %>
+<% Planet.all.each do |planet| %>
+    <%= link_to planet.name, planet %>
+<% end %>
